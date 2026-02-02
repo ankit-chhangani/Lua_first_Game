@@ -1,14 +1,14 @@
 
 
 function love.load()
-    wf = require "libraries/windfield"
+    wf = require "assets/libraries/windfield"
     world = wf.newWorld(0,0,true)
 
-    anim8 = require "libraries/anim8"
+    anim8 = require "assets/libraries/anim8"
     love.graphics.setDefaultFilter("nearest", "nearest")
-    sti = require "libraries/sti"
-    gamemap = sti("maps/testmap.lua")
-    camera = require "libraries/camera"
+    sti = require "assets/libraries/sti"
+    gamemap = sti("assets/maps/testmap.lua")
+    camera = require "assets/libraries/camera"
     cam = camera()
    
     player = {}
@@ -19,8 +19,8 @@ function love.load()
     player.speed = 200
     player.width = 50
     player.height = 50
-    player.spritesheet = love.graphics.newImage("sprites/player-sheet.png")
-    player.sprite = love.graphics.newImage("sprites/parrot.png")
+    player.spritesheet = love.graphics.newImage("assets/sprites/player-sheet.png")
+    player.sprite = love.graphics.newImage("assets/sprites/parrot.png")
     player.grid = anim8.newGrid(12,18, player.spritesheet:getWidth(), player.spritesheet:getHeight())
 
     player.animations = {}
@@ -31,7 +31,7 @@ function love.load()
 
     player.anim = player.animations.left
     
-    background = love.graphics.newImage("sprites/background.png")
+    background = love.graphics.newImage("assets/sprites/background.png")
 
 
     walls = {}
@@ -43,8 +43,8 @@ function love.load()
         end
     end
     sounds = {}
-    sounds.blip = love.audio.newSource("sounds/blip.wav", "static")
-    sounds.music = love.audio.newSource("sounds/music.mp3", "stream")
+    sounds.blip = love.audio.newSource("assets/sounds/blip.wav", "static")
+    sounds.music = love.audio.newSource("assets/sounds/music.mp3", "stream")
     sounds.music:play()
     sounds.music:setLooping(true)
 end
