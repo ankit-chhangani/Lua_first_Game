@@ -73,5 +73,7 @@ This demo serves as a foundation for more complex game projects. Potential enhan
 - Improved graphics and effects
 
 ---
+## Here's the link to itch. io
+https://ankitgamer12.itch.io/first-game
 
 *Developed with ❤️ using Lua and LÖVE*</content>
